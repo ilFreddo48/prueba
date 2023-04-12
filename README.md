@@ -1,4 +1,4 @@
-# prueba
+# Test
 Tres servicios uno gateway que juega como un reverse proxy y comprueba la api key como forma de seguridad ligera, luego un service discovery un anuario de los microservicios y finalmente el servicio back donde hay el microservicio que comunica con la bd.
 - gateway https://github.com/ilFreddo48/gateway
 - backend https://github.com/ilFreddo48/service-backend
