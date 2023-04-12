@@ -1,0 +1,19 @@
+Index: backend-service/src/main/java/com/inditex/prueba/infra/adapter/input/rest/response/PriceResponse.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.inditex.prueba.infra.adapter.input.rest.response;\n\nimport com.inditex.prueba.domain.Price;\nimport com.inditex.prueba.infra.adapter.input.rest.request.PriceRequest;\nimport lombok.Data;\n\nimport java.time.LocalDateTime;\n\n@Data\npublic class PriceResponse extends PriceRequest {\n\n    private Integer priceId;\n    private Long price;\n\n\n    public static String createResponse(Price price) {\n        int hour = LocalDateTime.now().getHour();\n        int minute = LocalDateTime.now().getMinute();\n        int day = LocalDateTime.now().getDayOfMonth();\n        String s = \"Test 1: petición a las \"+hour+\":\"+minute+\" del día \"+ day+\" del producto \" + price.getProductId() + \" 35455 para la brand \" + price.getBrandId() + \" (\" + price.getBrandName() + \")\";\n        return s;\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend-service/src/main/java/com/inditex/prueba/infra/adapter/input/rest/response/PriceResponse.java b/backend-service/src/main/java/com/inditex/prueba/infra/adapter/input/rest/response/PriceResponse.java
+--- a/backend-service/src/main/java/com/inditex/prueba/infra/adapter/input/rest/response/PriceResponse.java	(revision cfd65b41404fb91e66c88ffdf3c21080bd7b0b95)
++++ b/backend-service/src/main/java/com/inditex/prueba/infra/adapter/input/rest/response/PriceResponse.java	(date 1681103316354)
+@@ -17,7 +17,7 @@
+         int hour = LocalDateTime.now().getHour();
+         int minute = LocalDateTime.now().getMinute();
+         int day = LocalDateTime.now().getDayOfMonth();
+-        String s = "Test 1: petición a las "+hour+":"+minute+" del día "+ day+" del producto " + price.getProductId() + " 35455 para la brand " + price.getBrandId() + " (" + price.getBrandName() + ")";
++        String s = "Test 1: petición a las "+hour+":"+minute+" del día "+ day+" del producto " + price.getProductId() + " para la brand " + price.getBrandId() + " (" + price.getBrandName() + ")";
+         return s;
+     }
+ }
