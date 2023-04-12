@@ -1,0 +1,9 @@
+[submodule "gateway"]
+	path = gateway
+	url = https://github.com/ilFreddo48/gateway.git
+[submodule "service-backend"]
+	path = service-backend
+	url = https://github.com/ilFreddo48/service-backend.git
+[submodule "discovery-service"]
+	path = discovery-service
+	url = https://github.com/ilFreddo48/discovery-service.git
